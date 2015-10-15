@@ -1,5 +1,5 @@
 BioUpdateCheck=function(){
-  ajax('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/BioVersionNumber.txt',BioUpdateResponse);
+  ajax('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/BioVersionNumber.php',BioUpdateResponse);
 }
 BioUpdateResponse=function(response){
   var BioNewVersion=response;
