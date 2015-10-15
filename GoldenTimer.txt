@@ -23,7 +23,7 @@ function goldendraw(){
   versiontext+="<br />";
   if(BioUpdate)
     versiontext+="<font color=\"FF0000\">";
-  versiontext+="BioV."+CurrentBioVersion;
+  versiontext+="BioV."+BioVersion;
   if(BioUpdate){
     versiontext+="</font> ";
     versiontext="<button onclick=\"BioUpdateInit()\">Update</button>";
