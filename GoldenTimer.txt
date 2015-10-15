@@ -1,5 +1,5 @@
 function goldendraw(){
-  if(Game.T%(Game.fps*60*30)==0&&Game.T>Game.fps*10){
+  if(Game.T%(Game.fps*60)==0&&Game.T>Game.fps*10){
     BioUpdateCheck();
   }
   var versiontext='v.'+Game.version+(Game.beta?' <span style="color:#ff0;">beta</span>':'');
@@ -27,7 +27,7 @@ function goldendraw(){
   versiontext+="BioV."+BioVersion;
   if(BioUpdate){
     versiontext+="</font> ";
-    versiontext+="<button onclick=\"BioUpdateInit()\">Update</button>";
+    versiontext+="<button onclick=\"BioUpdateFiles()\">Update</button>";
   }
   versiontext+="<br />"+timetext;
   l('versionNumber').innerHTML=versiontext;
