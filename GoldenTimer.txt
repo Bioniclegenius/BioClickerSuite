@@ -1,6 +1,7 @@
 function goldendraw(){
-  if(Game.T%(Game.fps*60*30)==0&&Game.T>Game.fps*10)
+  if(Game.T%(Game.fps*60*30)==0&&Game.T>Game.fps*10){
     BioUpdateCheck();
+  }
   var versiontext='v.'+Game.version+(Game.beta?' <span style="color:#ff0;">beta</span>':'');
   var minseconds=(Math.floor((Game.goldenCookie.getMinTime()-Game.goldenCookie.time)/Game.fps)%60);
   var maxseconds=(Math.floor((Game.goldenCookie.getMaxTime()-Game.goldenCookie.time)/Game.fps)%60);
