@@ -1,0 +1,24 @@
+function goldendraw(){
+  var versiontext='v.'+Game.version+(Game.beta?' <span style="color:#ff0;">beta</span>':'');
+  var minseconds=(Math.floor((Game.goldenCookie.getMinTime()-Game.goldenCookie.time)/Game.fps)%60);
+  var maxseconds=(Math.floor((Game.goldenCookie.getMaxTime()-Game.goldenCookie.time)/Game.fps)%60);
+  var mintime=Math.floor((Game.goldenCookie.getMinTime()-Game.goldenCookie.time)/Game.fps/60);
+  mintime+=":"+Math.floor(minseconds/10)+minseconds%10;
+  if(Game.goldenCookie.getMinTime()-Game.goldenCookie.time<0)
+    mintime="Past";
+  var maxtime=Math.floor((Game.goldenCookie.getMaxTime()-Game.goldenCookie.time)/Game.fps/60);
+  maxtime+=":"+Math.floor(maxseconds/10)+maxseconds%10;
+  var timetext=mintime+" - "+maxtime;
+  if(Game.goldenCookie.time==0){
+    var title='Cookie Clicker';
+    if(Game.season=='fools')
+      title='Cookie Baker';
+    title==Beautify(Game.cookies)+' '+(Game.cookies==1?'cookie':'cookies')+' - '+title;
+    title="(G) "+title;
+    document.title=title;
+    timetext="Spawned!";
+  }
+  l('versionNumber').innerHTML=versiontext+"<br />"+timetext;
+}
+
+Game.customDraw.push(goldendraw);
