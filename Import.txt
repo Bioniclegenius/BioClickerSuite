@@ -2,7 +2,7 @@ javascript:(function() {
   Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Include.txt');
 }());
 BioUpdateInit=null;
-checkForLoad(){
+checkForLoad=function(){
   if(BioUpdateInit!=null){
     BioUpdateInit();
     Game.customLogic.splice(Game.customLogic.indexOf(checkForLoad),1);
