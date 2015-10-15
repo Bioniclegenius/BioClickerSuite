@@ -9,7 +9,7 @@ BioUpdateCheck=function(){
   }());
   BioUpdateResponse(BioVersionNumberAssign());
 }
-BioUpdateFiles(){
+BioUpdateFiles=function(){
   javascript:(function() {
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Include.txt');
   }());
