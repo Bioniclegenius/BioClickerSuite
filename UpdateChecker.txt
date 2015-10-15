@@ -2,7 +2,7 @@ BioUpdateCheck=function(){
   javascript:(function() {
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/BioVersionNumber.txt');
   }());
-  BioUpdateResponse(BioVersionNumberAssign);
+  BioUpdateResponse(BioVersionNumberAssign());
 }
 BioUpdateResponse=function(response){
   var BioNewVersion=response;
