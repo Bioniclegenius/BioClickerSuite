@@ -1,3 +1,3 @@
 javascript:(function() {
-    Game.LoadMod('http://pastebin.com/raw.php?i=SphyXCp0');
+    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Include.txt');
 }());
