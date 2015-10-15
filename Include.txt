@@ -1,10 +1,10 @@
 var BioVersion="Unset";
 var BioUpdate=true;
-ajax('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/BioVersionNumber.txt',BioInitialVersionSet);
 BioInitialVersionSet=function(response){
   BioVersion=response;
   BioUpdate=false;
 }
+ajax('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/BioVersionNumber.txt',BioInitialVersionSet);
 BioUpdateInit=function(){
   javascript:(function() {
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/UpdateChecker.txt');
