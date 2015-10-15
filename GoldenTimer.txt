@@ -18,7 +18,7 @@ function goldendraw(){
     document.title=title;
     timetext="<font color=\"DCAF00\">Spawned!</font>";
   }
-  l('versionNumber').innerHTML=versiontext+"<br />"+timetext;
+  l('versionNumber').innerHTML=versiontext+"<br />BioV.0.0.1<br />"+timetext;
 }
 
 Game.customDraw.push(goldendraw);
