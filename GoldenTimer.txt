@@ -1,5 +1,6 @@
+var prevcheck=0;
 function goldendraw(){
-  if(Game.T%(Game.fps*60)==0&&Game.T>Game.fps*10){
+  if(Math.floor(Game.T/(Game.fps*60*30))!=prevcheck){
     BioUpdateCheck();
   }
   var versiontext='v.'+Game.version+(Game.beta?' <span style="color:#ff0;">beta</span>':'');
