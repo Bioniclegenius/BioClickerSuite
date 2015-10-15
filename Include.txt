@@ -19,3 +19,4 @@ BioUpdateInit=function(){
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/ThirdParty.txt');
   }());
 }
+BioUpdateInit();
