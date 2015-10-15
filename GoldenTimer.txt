@@ -1,3 +1,4 @@
+var CurrentBioVersion=BioVersion;
 function goldendraw(){
   var versiontext='v.'+Game.version+(Game.beta?' <span style="color:#ff0;">beta</span>':'');
   var minseconds=(Math.floor((Game.goldenCookie.getMinTime()-Game.goldenCookie.time)/Game.fps)%60);
@@ -19,7 +20,7 @@ function goldendraw(){
     timetext="<font color=\"DCAF00\">Spawned!</font>";
   }
   versiontext+="<br />";
-  versiontext+="BioV."+BioVersion;
+  versiontext+="BioV."+CurrentBioVersion;
   versiontext+="<br />"+timetext;
   l('versionNumber').innerHTML=versiontext;
 }

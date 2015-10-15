@@ -1,4 +1,7 @@
 javascript:(function() {
+    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/BioVersionNumber.txt');
+}());
+javascript:(function() {
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Numbers.txt');
 }());
 javascript:(function() {
@@ -7,4 +10,3 @@ javascript:(function() {
 javascript:(function() {
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/ThirdParty.txt');
 }());
-var BioVersion="0.0.1";
