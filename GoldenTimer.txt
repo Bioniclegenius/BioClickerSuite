@@ -16,7 +16,7 @@ function goldendraw(){
     title==Beautify(Game.cookies)+' '+(Game.cookies==1?'cookie':'cookies')+' - '+title;
     title="(G) "+title;
     document.title=title;
-    timetext="Spawned!";
+    timetext="<font color=\"DCAF00\">Spawned!</font>";
   }
   l('versionNumber').innerHTML=versiontext+"<br />"+timetext;
 }
