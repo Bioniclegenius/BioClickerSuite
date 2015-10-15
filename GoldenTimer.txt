@@ -1,5 +1,6 @@
-var CurrentBioVersion=BioVersion;
 function goldendraw(){
+  if(Game.T%(Game.fps*60*30)==0&&Game.T>Game.fps*10)
+    BioUpdateCheck();
   var versiontext='v.'+Game.version+(Game.beta?' <span style="color:#ff0;">beta</span>':'');
   var minseconds=(Math.floor((Game.goldenCookie.getMinTime()-Game.goldenCookie.time)/Game.fps)%60);
   var maxseconds=(Math.floor((Game.goldenCookie.getMaxTime()-Game.goldenCookie.time)/Game.fps)%60);
@@ -20,7 +21,13 @@ function goldendraw(){
     timetext="<font color=\"DCAF00\">Spawned!</font>";
   }
   versiontext+="<br />";
+  if(BioUpdate)
+    versiontext+="<font color=\"FF0000\">";
   versiontext+="BioV."+CurrentBioVersion;
+  if(BioUpdate){
+    versiontext+="</font> ";
+    versiontext="<button onclick=\"BioUpdateInit()\">Update</button>";
+  }
   versiontext+="<br />"+timetext;
   l('versionNumber').innerHTML=versiontext;
 }

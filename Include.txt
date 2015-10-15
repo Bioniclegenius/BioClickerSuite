@@ -1,12 +1,21 @@
-javascript:(function() {
-    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/BioVersionNumber.txt');
-}());
-javascript:(function() {
+var BioVersion="Unset";
+var BioUpdate=true;
+ajax('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/BioVersionNumber.txt',BioInitialVersionSet);
+BioInitialVersionSet=function(response){
+  BioVersion=response;
+  BioUpdate=false;
+}
+BioUpdateInit=function(){
+  javascript:(function() {
+    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/UpdateChecker.txt');
+  }());
+  javascript:(function() {
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Numbers.txt');
-}());
-javascript:(function() {
+  }());
+  javascript:(function() {
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/GoldenTimer.txt');
-}());
-javascript:(function() {
+  }());
+  javascript:(function() {
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/ThirdParty.txt');
-}());
+  }());
+}

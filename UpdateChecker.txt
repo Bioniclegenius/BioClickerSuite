@@ -1,0 +1,8 @@
+BioUpdateCheck=function(){
+  ajax('server.php',BioUpdateResponse);
+}
+BioUpdateResponse=function(response){
+  var BioNewVersion=response;
+  if(BioNewVersion!=BioVersion)
+    BioUpdate=true;
+}
