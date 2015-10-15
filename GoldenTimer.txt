@@ -27,7 +27,7 @@ function goldendraw(){
   versiontext+="BioV."+BioVersion;
   if(BioUpdate){
     versiontext+="</font> ";
-    versiontext="<button onclick=\"BioUpdateInit()\">Update</button>";
+    versiontext+="<button onclick=\"BioUpdateInit()\">Update</button>";
   }
   versiontext+="<br />"+timetext;
   l('versionNumber').innerHTML=versiontext;
