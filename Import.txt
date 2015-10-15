@@ -1,4 +1,11 @@
 javascript:(function() {
   Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Include.txt');
 }());
-BioUpdateInit();
+BioUpdateInit=null;
+checkForLoad(){
+  if(BioUpdateInit!=null){
+    BioUpdateInit();
+    Game.customLogic.splice(Game.customLogic.indexOf(checkForLoad),1);
+  }
+}
+Game.customLogic.push(checkForLoad);
