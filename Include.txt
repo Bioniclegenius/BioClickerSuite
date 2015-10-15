@@ -1,9 +1,12 @@
-javascript:(function() {
-    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Numbers.txt');
-}());
-javascript:(function() {
-    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/GoldenTimer.txt');
-}());
-javascript:(function() {
-    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/ThirdParty.txt');
-}());
+function updateBio(){
+  javascript:(function() {
+      Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Numbers.txt');
+  }());
+  javascript:(function() {
+      Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/GoldenTimer.txt');
+  }());
+  javascript:(function() {
+      Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/ThirdParty.txt');
+  }());
+}
+var BioVersion="0.0.1";
