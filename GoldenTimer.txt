@@ -1,6 +1,6 @@
 var prevcheck=0;
 function goldendraw(){
-  if(Math.floor(Game.T/(Game.fps*60*30))!=prevcheck){
+  if(Math.floor(Game.T/(Game.fps*60*10))!=prevcheck){
     BioUpdateCheck();
     prevcheck=Math.floor(Game.T/(Game.fps*60*30));
   }
