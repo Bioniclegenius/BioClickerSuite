@@ -11,8 +11,6 @@ BioUpdateCheck=function(){
 }
 BioUpdateFiles=function(){
   javascript:(function() {
-    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Include.txt');
+    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Import.txt');
   }());
-  BioUpdateInit=null;
-  Game.customLogic.push(checkForLoad);
 }
