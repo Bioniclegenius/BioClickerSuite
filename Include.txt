@@ -1,5 +1,5 @@
 var BioVersion="Unset";
-var BioUpdate=true;
+var BioUpdate=false;
 BioInitialVersionSet=function(response){
   BioVersion=response;
   BioUpdate=false;
@@ -7,7 +7,6 @@ BioInitialVersionSet=function(response){
 javascript:(function() {
   Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/BioVersionNumber.txt');
 }());
-BioInitialVersionSet(BioVersionNumberAssign);
 BioUpdateInit=function(){
   javascript:(function() {
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/UpdateChecker.txt');
@@ -21,5 +20,6 @@ BioUpdateInit=function(){
   javascript:(function() {
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/ThirdParty.txt');
   }());
+  BioInitialVersionSet(BioVersionNumberAssign);
 }
 BioUpdateInit();
