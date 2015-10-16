@@ -21,8 +21,10 @@ BioUpdateInit=function(){
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/ThirdParty.txt');
   }());
   var i=l('timers').innerHTML;
-  i+="<div style=\"display: block; width: 100%;\" id=\"timer-goldenmax\"></div>";
-  i+="<div style=\"display: block; width: 100%; margin-top: -8px;\" id=\"timer-goldenmin\"></div>";
+  if(Game.timersEl['goldenmax']==null)
+    i+="<div style=\"display: block; width: 100%;\" id=\"timer-goldenmax\"></div>";
+  if(Game.timersEl['goldenmin']==null)
+    i+="<div style=\"display: block; width: 100%; margin-top: -8px;\" id=\"timer-goldenmin\"></div>";
   l('timers').innerHTML=i;
   var timers=['goldenmax','goldenmin'];
   for(var t in timers)

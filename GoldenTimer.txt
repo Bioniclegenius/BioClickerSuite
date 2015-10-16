@@ -34,8 +34,20 @@ function goldendraw(){
   }
   versiontext+="<br />"+timetext;
   l('versionNumber').innerHTML=versiontext;
+  var offset=Game.goldenCookie.getMaxTime()-Game.goldenCookie.getMinTime();
   Game.timersEl['goldenmax'].style.width=(100-(Game.goldenCookie.time/Game.goldenCookie.getMaxTime())*100)+'%';
-  Game.timersEl['goldenmin'].style.width=(100-(Game.goldenCookie.time/Game.goldenCookie.getMinTime())*100)+'%';
+  Game.timersEl['goldenmin'].style.width=(100-(Game.goldenCookie.time/Game.goldenCookie.getMaxTime()-offset)*100)+'%';
+  if(Game.goldenCookie.life>0){
+    Game.timersEl['goldenmax'].style.display='none';
+    Game.timersEl['goldenmin'].style.display='none';
+  }
+  else{
+    Game.timersEl['goldenmax'].style.display='block';
+    if(Game.goldenCookie.time>Game.goldenCookie.getMinTime())
+      Game.timersEl['goldenmin'].style.display='none';
+    else
+      Game.timersEl['goldenmin'].style.display='block';
+  }
 }
 
 Game.customDraw.push(goldendraw);
