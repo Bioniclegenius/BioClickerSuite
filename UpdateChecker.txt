@@ -17,8 +17,3 @@ BioUpdateCheck=function(){
   BioVersionNumberAssign=null;
   Game.customLogic.push(checkForLoadVersion);
 }
-BioUpdateFiles=function(){
-  javascript:(function() {
-    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Import.txt');
-  }());
-}

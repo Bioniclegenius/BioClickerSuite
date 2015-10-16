@@ -1,8 +1,9 @@
 var prevcheck=0;
 function goldendraw(){
-  if(Math.floor(Game.T/(Game.fps*60*10))!=prevcheck){
+  var timecheck=Game.fps*60*10;
+  if(Math.floor(Game.T/timecheck)!=prevcheck){
     BioUpdateCheck();
-    prevcheck=Math.floor(Game.T/(Game.fps*60*30));
+    prevcheck=Math.floor(Game.T/timecheck);
   }
   var versiontext='v.'+Game.version+(Game.beta?' <span style="color:#ff0;">beta</span>':'');
   var minseconds=(Math.floor((Game.goldenCookie.getMinTime()-Game.goldenCookie.time)/Game.fps)%60);
@@ -29,10 +30,13 @@ function goldendraw(){
   versiontext+="BioV."+BioVersion;
   if(BioUpdate){
     versiontext+="</font> ";
-    versiontext+="<button onclick=\"BioUpdateFiles()\">Update</button>";
+    versiontext+="<button onclick=\"javascript:(function(){Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Import.txt');
+  }());\">Update</button>";
   }
   versiontext+="<br />"+timetext;
   l('versionNumber').innerHTML=versiontext;
+  Game.timersEl['goldenmax'].style.width=(100-(Game.goldenCookie.time/Game.goldenCookie.getMaxTime())*100)+'%';
+  Game.timersEl['goldenmin'].style.width=(100-(Game.goldenCookie.time/Game.goldenCookie.getMinTime())*100)+'%';
 }
 
 Game.customDraw.push(goldendraw);

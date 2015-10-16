@@ -20,5 +20,8 @@ BioUpdateInit=function(){
   javascript:(function() {
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/ThirdParty.txt');
   }());
+  var i=l('timers').innerHTML;
+  i=i.substring(0,i.length-6)+"<div style=\"display: block; width: 100%;\" id=\"timer-goldenmax\"></div>"+i.substring(i.length-6);
+  i=i.substring(0,i.length-6)+"<div style=\"display: block; width: 100%;\" id=\"timer-goldenmin\"></div>"+i.substring(i.length-6);
   BioInitialVersionSet(BioVersionNumberAssign());
 }
