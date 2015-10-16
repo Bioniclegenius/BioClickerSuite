@@ -51,5 +51,7 @@ function goldendraw(){
       Game.timersEl['goldenmin'].style.display='block';
   }
 }
-
-Game.customDraw.push(goldendraw);
+if(Game.customDraw['goldendraw']==null)
+  Game.customDraw.push(goldendraw);
+else
+  Game.customDraw['goldendraw']=goldendraw;

@@ -21,6 +21,9 @@ BioUpdateInit=function(){
   javascript:(function() {
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/ThirdParty.txt');
   }());
+  javascript:(function() {
+    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/autobuy.txt');
+  }());
   var i=l('timers').innerHTML;
   if(Game.timersEl['goldenmax']==null)
     i+="<div style=\"display: block; width: 100%;\" id=\"timer-goldenmax\"></div>";
@@ -30,7 +33,10 @@ BioUpdateInit=function(){
   var timers=['goldenmax','goldenmin'];
   for(var t in timers)
     Game.timersEl[timers[t]]=l('timer-'+timers[t]);
-  Game.customLogic.push(BioCheckforUpdateLoad);
+  if(Game.customLogic['BioCheckForUpdateLoad']==null)
+    Game.customLogic.push(BioCheckforUpdateLoad);
+  else
+    Game.customLogic['BioCheckForUpdateLoad']=BioCheckForUpdateLoad;
 }
 BioCheckforUpdateLoad=function(){
   if(BioVersionNumberAssign!=null){

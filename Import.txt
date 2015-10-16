@@ -8,4 +8,7 @@ checkForLoad=function(){
     Game.customLogic.splice(Game.customLogic.indexOf(checkForLoad),1);
   }
 }
-Game.customLogic.push(checkForLoad);
+if(Game.customLogic['checkForLoad']==null)
+  Game.customLogic.push(checkForLoad);
+else
+  Game.customLogic['checkForLoad']=checkForLoad;
