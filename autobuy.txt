@@ -3,12 +3,12 @@ bioautobuy=function(){
     if(Game.prefs['BioAutoBuy']==1){
       for(var y in Game.Objects){
         var i=Game.Objects[y];
-        if((Game.cookiesd>=i.price&&(i.bought<10*(11-i.id)||i.bought<Math.pow(2,10-i.id))&&i.bought<128)||i.displayName=="Prism")
+        if((Game.cookies>=i.price&&(i.bought<10*(11-i.id)||i.bought<Math.pow(2,10-i.id))&&i.bought<128)||i.displayName=="Prism")
           i.buy();
       }
       for(var y in Game.UpgradesInStore){
         var x=Game.UpgradesInStore[y];
-        if(Game.cookiesd>x.basePrice&&x.name!="One mind")
+        if(Game.cookies>x.basePrice&&x.name!="One mind")
           x.buy();
       }
       if(Game.goldenCookie.time==0&&Game.goldenCookie.life>0)
