@@ -35,8 +35,10 @@ function goldendraw(){
   versiontext+="<br />"+timetext;
   l('versionNumber').innerHTML=versiontext;
   var offset=Game.goldenCookie.getMaxTime()-Game.goldenCookie.getMinTime();
+  offset/=Game.goldenCookie.getMaxTime();
+  offset*=100;
   Game.timersEl['goldenmax'].style.width=(100-(Game.goldenCookie.time/Game.goldenCookie.getMaxTime())*100)+'%';
-  Game.timersEl['goldenmin'].style.width=(100-(Game.goldenCookie.time/Game.goldenCookie.getMaxTime()-offset/Game.goldenCookie.getMaxTime())*100)+'%';
+  Game.timersEl['goldenmin'].style.width=(100-(Game.goldenCookie.time/Game.goldenCookie.getMaxTime())*100-offset)+'%';
   if(Game.goldenCookie.life>0){
     Game.timersEl['goldenmax'].style.display='none';
     Game.timersEl['goldenmin'].style.display='none';
