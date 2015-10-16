@@ -3,7 +3,7 @@ bioautobuy=function(){
     if(Game.prefs['BioAutoBuy']==1){
       for(var y in Game.Objects){
         var i=Game.Objects[y];
-        if((Game.cookiesd>i.price&&(i.bought<10*(11-i.id)||i.bought<Math.pow(2,10-i.id))&&i.bought<128)||i.displayName=="Prism")
+        if((Game.cookiesd>=i.price&&(i.bought<10*(11-i.id)||i.bought<Math.pow(2,10-i.id))&&i.bought<128)||i.displayName=="Prism")
           i.buy();
       }
       for(var y in Game.UpgradesInStore){
