@@ -6,23 +6,23 @@ BioInitialVersionSet=function(response){
 }
 BioVersionNumberAssign=null;
 javascript:(function() {
-  Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/BioVersionNumber.txt');
+  Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/BioVersionNumber.js');
 }());
 BioUpdateInit=function(){
   javascript:(function() {
-    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/UpdateChecker.txt');
+    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/UpdateChecker.js');
   }());
   javascript:(function() {
-    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Numbers.txt');
+    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Numbers.js');
   }());
   javascript:(function() {
-    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/GoldenTimer.txt');
+    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/GoldenTimer.js');
   }());
   javascript:(function() {
-    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/ThirdParty.txt');
+    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/ThirdParty.js');
   }());
   javascript:(function() {
-    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/autobuy.txt');
+    Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/autobuy.js');
   }());
   var i=l('timers').innerHTML;
   if(Game.timersEl['goldenmax']==null)
