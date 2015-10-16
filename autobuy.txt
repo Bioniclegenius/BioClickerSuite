@@ -17,7 +17,7 @@ bioautobuy=function(){
 }
 autobuymenubutton=function(){
   if(Game.prefs['BioAutoBuy']==null)
-    Game.prefs.push('BioAutoBuy',false);
+    Game.prefs['BioAutoBuy']=false;
   var i=l('menu');
   var button=document.createElement("DIV");
   var button="<div class=\"listing\"><a class=\"option\" id=\"BioAutoBuy\" onclick=\"Game.Toggle('BioAutoBuy','BioAutoBuy','Autobuy ON','Autobuy OFF');\">Autobuy OFF</a><label>(will automatically purchase stuff and autoclick golden cookies if enabled)</label></div>";
