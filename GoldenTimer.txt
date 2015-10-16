@@ -30,8 +30,7 @@ function goldendraw(){
   versiontext+="BioV."+BioVersion;
   if(BioUpdate){
     versiontext+="</font> ";
-    versiontext+="<button onclick=\"javascript:(function(){Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Import.txt');
-  }());\">Update</button>";
+    versiontext+="<button onclick=\"javascript:(function(){Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/Import.txt');}());\">Update</button>";
   }
   versiontext+="<br />"+timetext;
   l('versionNumber').innerHTML=versiontext;
