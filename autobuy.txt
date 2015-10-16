@@ -1,6 +1,6 @@
 bioautobuy=function(){
   if(Game.prefs['BioAutoBuy']!=null)
-    if(Game.prefs['BioAutoBuy']==true){
+    if(Game.prefs['BioAutoBuy']==1){
       for(var y in Game.Objects){
         var i=Game.Objects[y];
         if((Game.cookiesd>i.price&&(i.bought<10*(11-i.id)||i.bought<Math.pow(2,10-i.id))&&i.bought<128)||i.displayName=="Prism")
@@ -17,10 +17,10 @@ bioautobuy=function(){
 }
 autobuymenubutton=function(){
   if(Game.prefs['BioAutoBuy']==null)
-    Game.prefs['BioAutoBuy']=false;
+    Game.prefs['BioAutoBuy']=0;
   var i=l('menu');
   var button=document.createElement("DIV");
-  var button="<div class=\"listing\"><a class=\"option\" id=\"BioAutoBuy\" onclick=\"Game.Toggle('BioAutoBuy','BioAutoBuy','Autobuy ON','Autobuy OFF');\">Autobuy OFF</a><label>(will automatically purchase stuff and autoclick golden cookies if enabled)</label></div>";
+  var button="<div class=\"listing\"><a class=\"option\" id=\"BioAutoBuy\" onclick=\"Game.Toggle('BioAutoBuy','BioAutoBuy','Autobuy ON','Autobuy OFF');\">Autobuy OFF</a><label>Automatically purchases stuff and autoclicks golden cookies if enabled. NOTE: WILL NOT BUY 'ONE MIND'.</label></div>";
   if(Game.onMenu=="prefs"&&i.childNodes.length>0){
     var inmenu=false;
     for(var k=0;k<i.childNodes[2].childNodes.length;k++)
