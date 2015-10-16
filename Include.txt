@@ -23,9 +23,9 @@ BioUpdateInit=function(){
   var i=l('timers').innerHTML;
   i=i.substring(0,i.length-6)+"<div style=\"display: block; width: 100%;\" id=\"timer-goldenmax\"></div>"+i.substring(i.length-6);
   i=i.substring(0,i.length-6)+"<div style=\"display: block; width: 100%; padding-top: -8px;\" id=\"timer-goldenmin\"></div>"+i.substring(i.length-6);
-  Game.timersEl=[];
-  var timers=['frenzy','elderFrenzy','clot','clickFrenzy','goldenmax','goldenmin'];
+  l('timers').innerHTML=i;
+  var timers=['goldenmax','goldenmin'];
   for(var t in timers)
-    Game.timersEl[timers[i]]=l('timer-'+timers[i]);
+    Game.timersEl[timers[t]]=l('timer-'+timers[t]);
   BioInitialVersionSet(BioVersionNumberAssign());
 }
