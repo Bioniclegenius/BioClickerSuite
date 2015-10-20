@@ -3,16 +3,18 @@ bioautobuy=function(){
     if(Game.prefs['BioAutoBuy']==1){
       for(var y in Game.Objects){
         var i=Game.Objects[y];
-        if((Game.cookies>=i.price&&(i.bought<10*(11-i.id)||i.bought<Math.pow(2,10-i.id))&&i.bought<128)||i.displayName=="Prism")
+        if((Game.cookies>=i.price&&(i.amount<10*(11-i.id)||i.amount<Math.pow(2,10-i.id))&&i.amount<128)||i.displayName=="Prism")
           i.buy();
       }
       for(var y in Game.UpgradesInStore){
         var x=Game.UpgradesInStore[y];
-        if(Game.cookies>x.basePrice&&x.name!="One mind")
+        if(Game.cookies>x.basePrice&&x.name!="One mind"&&x.name!="Revoke Elder Covenant")
           x.buy();
       }
-      if(Game.goldenCookie.time==0&&Game.goldenCookie.life>0)
+      if(Game.goldenCookie.time==0&&Game.goldenCookie.life>0){
         Game.goldenCookie.click();
+        Game.CollectWrinklers();
+      }
     }
 }
 autobuymenubutton=function(){
