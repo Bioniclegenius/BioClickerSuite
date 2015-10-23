@@ -24,15 +24,15 @@ BioUpdateInit=function(){
   javascript:(function() {
     Game.LoadMod('https://raw.githubusercontent.com/Bioniclegenius/BioClickerSuite/master/autobuy.js');
   }());
-  var i=l('timers').innerHTML;
-  if(Game.timersEl['goldenmax']==null)
-    i+="<div style=\"display: block; width: 100%;\" id=\"timer-goldenmax\"></div>";
-  if(Game.timersEl['goldenmin']==null)
-    i+="<div style=\"display: block; width: 100%; margin-top: -8px;\" id=\"timer-goldenmin\"></div>";
-  l('timers').innerHTML=i;
-  var timers=['goldenmax','goldenmin'];
-  for(var t in timers)
-    Game.timersEl[timers[t]]=l('timer-'+timers[t]);
+  var timers=['frenzy','elderFrenzy','clot','clickFrenzy','goldenmax','goldenmin'];
+  var str='';
+  for(var i in timers)
+    str+='<div id="timer-'+timers[i]+'"></div>';
+  l('timers').innerHTML=str;
+  Game.timersEl=[];
+  for(var i in timers)
+    Game.timersEl[timers[i]]=l('timer-'+timers[i]);
+  Game.timersEl['goldenmin'].style.margin="-8px 0px 0px 0px";
   if(Game.customLogic['BioCheckForUpdateLoad']==null)
     Game.customLogic.push(BioCheckforUpdateLoad);
   else
