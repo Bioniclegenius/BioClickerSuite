@@ -8,7 +8,7 @@ bioautobuy=function(){
       }
       for(var y in Game.UpgradesInStore){
         var x=Game.UpgradesInStore[y];
-        if(Game.cookies>x.basePrice&&x.name!="One mind"&&x.name!="Revoke Elder Covenant")
+        if(Game.cookies>x.basePrice&&x.name!="One mind"&&x.name!="Revoke Elder Covenant"&&x.name!="Heavenly chip secret")
           x.buy();
       }
       if(Game.goldenCookie.time==0&&Game.goldenCookie.life>0){
