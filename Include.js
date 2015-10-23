@@ -32,7 +32,7 @@ BioUpdateInit=function(){
   Game.timersEl=[];
   for(var i in timers)
     Game.timersEl[timers[i]]=l('timer-'+timers[i]);
-  Game.timersEl['goldenmin'].style.margin="-8px 0px 0px 0px";
+  Game.timersEl['goldenmin'].style.marginTop="-8px";
   if(Game.customLogic['BioCheckForUpdateLoad']==null)
     Game.customLogic.push(BioCheckforUpdateLoad);
   else
