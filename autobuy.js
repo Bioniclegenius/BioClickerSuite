@@ -20,7 +20,7 @@ bioautobuy=function(){
     }
   if(Game.prefs['BioAutoClick']!=null)
     if(Game.prefs['BioAutoClick']==1)
-      Game.clickCookie();
+      Game.ClickCookie();
 }
 autobuymenubutton=function(){
   if(Game.prefs['BioAutoBuy']==null)
