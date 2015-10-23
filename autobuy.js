@@ -16,7 +16,7 @@ bioautobuy=function(){
         Game.CollectWrinklers();
       }
       if(Game.clickFrenzy>0)
-        Game.clickCookie();
+        Game.ClickCookie();
     }
   if(Game.prefs['BioAutoClick']!=null)
     if(Game.prefs['BioAutoClick']==1)
