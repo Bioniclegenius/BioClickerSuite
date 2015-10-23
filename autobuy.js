@@ -15,14 +15,24 @@ bioautobuy=function(){
         Game.goldenCookie.click();
         Game.CollectWrinklers();
       }
+      if(Game.clickFrenzy>0)
+        Game.clickCookie();
     }
+  if(Game.prefs['BioAutoClick']!=null)
+    if(Game.prefs['BioAutoClick']==1)
+      Game.clickCookie();
 }
 autobuymenubutton=function(){
   if(Game.prefs['BioAutoBuy']==null)
     Game.prefs['BioAutoBuy']=0;
+  if(Game.prefs['BioAutoClick']==null)
+    Game.prefs['BioAutoClick']=0;
   var i=l('menu');
   var autobuyon=(Game.prefs['BioAutoBuy']==1)?'ON':'OFF';
+  var autoclickon=(Game.prefs['BioAutoClick']==1)?'ON':'OFF';
   var button="<div class=\"listing\"><a class=\"option\" id=\"BioAutoBuy\" onclick=\"Game.Toggle('BioAutoBuy','BioAutoBuy','Autobuy ON','Autobuy OFF');\">Autobuy "+autobuyon+"</a><label>Automatically purchases stuff and autoclicks golden cookies if enabled. NOTE: WILL NOT BUY 'ONE MIND'.</label></div>";
+  var button2="<div class=\"listing\"><a class=\"option\" id=\"BioAutoClick\" onclick=\"Game.Toggle('BioAutoClick','BioAutoClick','Autoclick ON','Autoclick OFF');\">Autoclick "+autoclickon+"</a><label>Automatically clicks the big cookie.</label></div>";
+  button+=button2;
   if(Game.onMenu=="prefs"&&i.childNodes.length>0){
     var inmenu=false;
     for(var k=0;k<i.childNodes[2].childNodes.length;k++)

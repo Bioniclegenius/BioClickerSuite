@@ -1,3 +1,3 @@
 BioVersionNumberAssign=function(){
-  return "0.0.25";
+  return "0.0.26";
 }
