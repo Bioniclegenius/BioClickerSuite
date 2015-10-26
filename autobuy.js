@@ -7,7 +7,7 @@ bioautobuy=function(){
           i.buy();
       }
       var nobuy=["One mind","Revoke Elder Covenant","Heavenly chip secret","Lovesick biscuit","Festive biscuit",
-                 "Ghostly biscuit","Fool's biscuit","Bunny biscuit","Elder Covenant"];
+                 "Ghostly biscuit","Fool's biscuit","Bunny biscuit","Elder Covenant","Elder Pledge"];
       for(var y in Game.UpgradesInStore){
         var x=Game.UpgradesInStore[y];
         var canbuy=true;
