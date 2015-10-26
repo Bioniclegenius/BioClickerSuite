@@ -6,9 +6,14 @@ bioautobuy=function(){
         if((Game.cookies>=i.price&&(i.amount<10*(11-i.id)||i.amount<Math.pow(2,10-i.id))&&i.amount<128)||i.displayName=="Prism")
           i.buy();
       }
+      var nobuy=["One mind","Revoke Elder Covenant","Heavenly chip secret","Lovesick biscuit","Festive biscuit","Ghostly biscuit","Fool's biscuit","Bunny biscuit"];
       for(var y in Game.UpgradesInStore){
         var x=Game.UpgradesInStore[y];
-        if(Game.cookies>x.basePrice&&x.name!="One mind"&&x.name!="Revoke Elder Covenant"&&x.name!="Heavenly chip secret")
+        var canbuy=true;
+        for(var t=0;t<nobuy.length;t++)
+          if(x.name==nobuy[t])
+            canbuy=false;
+        if(Game.cookies>x.basePrice&&canbuy)
           x.buy();
       }
       if(Game.goldenCookie.time==0&&Game.goldenCookie.life>0){
